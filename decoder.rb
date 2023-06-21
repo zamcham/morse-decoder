@@ -24,3 +24,17 @@ def decode_word(morse_code)
   
   decoded_word
 end
+
+# decode a message method
+def decode_message(morse_code)
+  morse_code_words = morse_code.split("   ")
+  decoded_message = ""
+  
+  morse_code_words.each do |morse_word|
+    decoded_word = decode_word(morse_word)
+    decoded_message << decoded_word
+    decoded_message << " " unless morse_word == morse_code_words.last
+  end
+  
+  decoded_message
+end
