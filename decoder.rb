@@ -14,7 +14,7 @@ end
 
 # decode a word method
 def decode_word(morse_code)
-  morse_code_words = morse_code.split(' ')
+  morse_code_words = morse_code.split
   decoded_word = ''
 
   morse_code_words.each do |morse_char|
